@@ -88,8 +88,10 @@ Replace these placeholders with client-specific content:
 **Services Section:**
 - `[SERVICES_DESCRIPTION]` → Services intro text
 - `[SERVICE_1/2/3_TITLE]` → Service names
-- `[SERVICE_1/2/3_DESCRIPTION]` → Service descriptions
+- `[SERVICE_1/2/3_DESCRIPTION]` → Service descriptions (front of card)
 - `[ICON_1/2/3]` → FontAwesome icon names (e.g., "cogs", "lightbulb", "chart-line")
+- `[SERVICE_1/2/3_DETAIL_PARAGRAPH_1/2]` → Detailed explanations for card back (2-3 sentences each)
+- `[SERVICE_1/2/3_BENEFIT_1/2/3]` → Three specific benefits for card back
 
 **Portfolio/Features:**
 - `[FEATURE_1/2_TITLE]` → Feature titles

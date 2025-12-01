@@ -86,27 +86,90 @@
                     <!-- Service Card 1 -->
                     <div class="w3-col l4 m6 s12 w3-margin-bottom">
                         <div class="c-card w3-white w3-card-4" style="padding: 30px; border-radius: 8px; min-height: 350px;">
-                            <i class="fa fa-[ICON_1] w3-text-metro-light-blue" style="font-size: 48px;"></i>
-                            <h3>[SERVICE_1_TITLE]</h3>
-                            <p>[SERVICE_1_DESCRIPTION]</p>
+                            <div class="card-flip-container">
+                                <div class="card-front">
+                                    <i class="fa fa-[ICON_1] w3-text-metro-light-blue" style="font-size: 48px;"></i>
+                                    <h3>[SERVICE_1_TITLE]</h3>
+                                    <p>[SERVICE_1_DESCRIPTION]</p>
+                                    <button class="btn-mehr-erfahren" onclick="flipCard(this)">Learn More</button>
+                                </div>
+                                <div class="card-back">
+                                    <button class="btn-close-card" onclick="closeCard(this)"><i class="fa fa-times"></i></button>
+                                    <div class="card-back-banner">
+                                        <img src="content/placeholder-service-1.jpg" alt="[SERVICE_1_TITLE]">
+                                    </div>
+                                    <div class="card-back-content">
+                                        <h1>[SERVICE_1_TITLE]</h1>
+                                        <p>[SERVICE_1_DETAIL_PARAGRAPH_1]</p>
+                                        <p>[SERVICE_1_DETAIL_PARAGRAPH_2]</p>
+                                        <ul class="benefit-list">
+                                            <li>[SERVICE_1_BENEFIT_1]</li>
+                                            <li>[SERVICE_1_BENEFIT_2]</li>
+                                            <li>[SERVICE_1_BENEFIT_3]</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Service Card 2 -->
                     <div class="w3-col l4 m6 s12 w3-margin-bottom">
                         <div class="c-card w3-white w3-card-4" style="padding: 30px; border-radius: 8px; min-height: 350px;">
-                            <i class="fa fa-[ICON_2] w3-text-metro-light-blue" style="font-size: 48px;"></i>
-                            <h3>[SERVICE_2_TITLE]</h3>
-                            <p>[SERVICE_2_DESCRIPTION]</p>
+                            <div class="card-flip-container">
+                                <div class="card-front">
+                                    <i class="fa fa-[ICON_2] w3-text-metro-light-blue" style="font-size: 48px;"></i>
+                                    <h3>[SERVICE_2_TITLE]</h3>
+                                    <p>[SERVICE_2_DESCRIPTION]</p>
+                                    <button class="btn-mehr-erfahren" onclick="flipCard(this)">Learn More</button>
+                                </div>
+                                <div class="card-back">
+                                    <button class="btn-close-card" onclick="closeCard(this)"><i class="fa fa-times"></i></button>
+                                    <div class="card-back-banner">
+                                        <img src="content/placeholder-service-2.jpg" alt="[SERVICE_2_TITLE]">
+                                    </div>
+                                    <div class="card-back-content">
+                                        <h1>[SERVICE_2_TITLE]</h1>
+                                        <p>[SERVICE_2_DETAIL_PARAGRAPH_1]</p>
+                                        <p>[SERVICE_2_DETAIL_PARAGRAPH_2]</p>
+                                        <ul class="benefit-list">
+                                            <li>[SERVICE_2_BENEFIT_1]</li>
+                                            <li>[SERVICE_2_BENEFIT_2]</li>
+                                            <li>[SERVICE_2_BENEFIT_3]</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Service Card 3 -->
                     <div class="w3-col l4 m6 s12 w3-margin-bottom">
                         <div class="c-card w3-white w3-card-4" style="padding: 30px; border-radius: 8px; min-height: 350px;">
-                            <i class="fa fa-[ICON_3] w3-text-metro-light-blue" style="font-size: 48px;"></i>
-                            <h3>[SERVICE_3_TITLE]</h3>
-                            <p>[SERVICE_3_DESCRIPTION]</p>
+                            <div class="card-flip-container">
+                                <div class="card-front">
+                                    <i class="fa fa-[ICON_3] w3-text-metro-light-blue" style="font-size: 48px;"></i>
+                                    <h3>[SERVICE_3_TITLE]</h3>
+                                    <p>[SERVICE_3_DESCRIPTION]</p>
+                                    <button class="btn-mehr-erfahren" onclick="flipCard(this)">Learn More</button>
+                                </div>
+                                <div class="card-back">
+                                    <button class="btn-close-card" onclick="closeCard(this)"><i class="fa fa-times"></i></button>
+                                    <div class="card-back-banner">
+                                        <img src="content/placeholder-service-3.jpg" alt="[SERVICE_3_TITLE]">
+                                    </div>
+                                    <div class="card-back-content">
+                                        <h1>[SERVICE_3_TITLE]</h1>
+                                        <p>[SERVICE_3_DETAIL_PARAGRAPH_1]</p>
+                                        <p>[SERVICE_3_DETAIL_PARAGRAPH_2]</p>
+                                        <ul class="benefit-list">
+                                            <li>[SERVICE_3_BENEFIT_1]</li>
+                                            <li>[SERVICE_3_BENEFIT_2]</li>
+                                            <li>[SERVICE_3_BENEFIT_3]</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,6 +275,14 @@
         <i class="fa fa-arrow-up"></i>
     </button>
 
+    <!-- Theme Toggle Button -->
+    <button onclick="toggleTheme()" class="theme-toggle" id="themeToggle">
+        <i class="fa fa-moon-o" id="themeIcon"></i>
+    </button>
+
+    <!-- Card Backdrop -->
+    <div class="card-backdrop" id="cardBackdrop" onclick="closeAllCards()"></div>
+
     <!-- JavaScript -->
     <script async>
         // Mobile Navigation Toggle
@@ -258,6 +329,83 @@
                 }
             }
         }
+
+        // Card Flip Functionality
+        function flipCard(button) {
+            var card = button.closest('.c-card');
+            var backdrop = document.getElementById('cardBackdrop');
+            
+            // Flip the card
+            card.classList.add('flipped');
+            
+            // After flip animation, zoom it
+            setTimeout(function() {
+                card.classList.add('zoomed');
+                backdrop.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }, 300);
+        }
+
+        function closeCard(button) {
+            var card = button.closest('.c-card');
+            var backdrop = document.getElementById('cardBackdrop');
+            
+            // Remove zoom first
+            card.classList.remove('zoomed');
+            backdrop.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // After zoom animation, unflip the card
+            setTimeout(function() {
+                card.classList.remove('flipped');
+            }, 600);
+        }
+
+        function closeAllCards() {
+            var cards = document.querySelectorAll('.c-card.zoomed');
+            cards.forEach(function(card) {
+                var closeBtn = card.querySelector('.btn-close-card');
+                if (closeBtn) {
+                    closeCard(closeBtn);
+                }
+            });
+        }
+
+        // ESC key to close cards
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAllCards();
+            }
+        });
+
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            var body = document.body;
+            var icon = document.getElementById('themeIcon');
+            
+            body.classList.toggle('dark-theme');
+            
+            // Update icon
+            if (body.classList.contains('dark-theme')) {
+                icon.className = 'fa fa-sun-o';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.className = 'fa fa-moon-o';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            var savedTheme = localStorage.getItem('theme');
+            var body = document.body;
+            var icon = document.getElementById('themeIcon');
+            
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-theme');
+                icon.className = 'fa fa-sun-o';
+            }
+        });
     </script>
 
 </body>

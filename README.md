@@ -28,6 +28,9 @@ A production-ready, responsive HTML/CSS website template designed for rapid depl
 - **Customizable Theme:** CSS variables for easy color customization
 - **SEO Friendly:** Semantic HTML with proper meta tags
 - **Accessibility Ready:** ARIA labels and alt text structure
+- **Card Flip Functionality:** Interactive service cards with detailed information on back
+- **Dark/Light Theme Toggle:** User preference saved in localStorage
+- **Keyboard Navigation:** ESC key closes card details
 
 ## 📁 Project Structure
 
@@ -124,6 +127,8 @@ Search for and replace these in `index.html`:
 - `[SERVICE_1/2/3_TITLE]`
 - `[SERVICE_1/2/3_DESCRIPTION]`
 - `[ICON_1/2/3]` (Font Awesome icon names)
+- `[SERVICE_1/2/3_DETAIL_PARAGRAPH_1/2]` (Detailed descriptions for card back)
+- `[SERVICE_1/2/3_BENEFIT_1/2/3]` (Three benefits for card back)
 
 **Features:**
 - `[FEATURE_1/2_TITLE]`
