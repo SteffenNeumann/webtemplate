@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[COMPANY_DESCRIPTION]">
+    <title>[COMPANY_NAME] - [TAGLINE]</title>
+    
+    <!-- W3.CSS Framework -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="content/favicon.ico">
+    
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navigation w3-bar w3-white w3-card" style="position: fixed; top: 0; z-index: 1000; width: 100%;">
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large">[COMPANY_NAME]</a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About</a>
+        <a href="#services" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Services</a>
+        <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
+        
+        <!-- Mobile Menu Button -->
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-large w3-hide-medium" onclick="toggleMobileNavigation()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- Mobile Sidebar Navigation -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none; z-index:2000;" id="mobile-sidenav">
+        <a href="javascript:void(0)" onclick="toggleMobileNavigation()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="#home" onclick="toggleMobileNavigation()" class="w3-bar-item w3-button">Home</a>
+        <a href="#about" onclick="toggleMobileNavigation()" class="w3-bar-item w3-button">About</a>
+        <a href="#services" onclick="toggleMobileNavigation()" class="w3-bar-item w3-button">Services</a>
+        <a href="#portfolio" onclick="toggleMobileNavigation()" class="w3-bar-item w3-button">Portfolio</a>
+        <a href="#contact" onclick="toggleMobileNavigation()" class="w3-bar-item w3-button">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" style="margin-top: 60px;">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero w3-container w3-center" style="padding: 100px 16px;">
+            <h1 class="w3-jumbo">
+                <span class="title-span">[HERO_TITLE]</span>
+            </h1>
+            <p class="w3-xlarge">[HERO_SUBTITLE]</p>
+            <p class="w3-large">[HERO_DESCRIPTION]</p>
+            <a href="#contact" class="w3-button w3-metro-light-blue w3-padding-large w3-large w3-margin-top">Get Started</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="w3-container container" style="padding: 80px 16px;">
+            <h2 class="w3-center"><span class="title-span">About Us</span></h2>
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-col l6 m12">
+                    <img src="content/placeholder-about.jpg" alt="About [COMPANY_NAME]" style="width:100%; border-radius: 8px;" class="w3-card-4">
+                </div>
+                <div class="w3-col l6 m12" style="padding: 20px;">
+                    <h3>[ABOUT_TITLE]</h3>
+                    <p>[ABOUT_PARAGRAPH_1]</p>
+                    <p>[ABOUT_PARAGRAPH_2]</p>
+                    <p>[ABOUT_PARAGRAPH_3]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="w3-container w3-light-grey" style="padding: 80px 16px;">
+            <div class="container">
+                <h2 class="w3-center"><span class="title-span">Our Services</span></h2>
+                <p class="w3-center w3-large">[SERVICES_DESCRIPTION]</p>
+                
+                <div class="w3-row-padding w3-margin-top">
+                    <!-- Service Card 1 -->
+                    <div class="w3-col l4 m6 s12 w3-margin-bottom">
+                        <div class="c-card w3-white w3-card-4" style="padding: 30px; border-radius: 8px; min-height: 350px;">
+                            <i class="fa fa-[ICON_1] w3-text-metro-light-blue" style="font-size: 48px;"></i>
+                            <h3>[SERVICE_1_TITLE]</h3>
+                            <p>[SERVICE_1_DESCRIPTION]</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="w3-col l4 m6 s12 w3-margin-bottom">
+                        <div class="c-card w3-white w3-card-4" style="padding: 30px; border-radius: 8px; min-height: 350px;">
+                            <i class="fa fa-[ICON_2] w3-text-metro-light-blue" style="font-size: 48px;"></i>
+                            <h3>[SERVICE_2_TITLE]</h3>
+                            <p>[SERVICE_2_DESCRIPTION]</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="w3-col l4 m6 s12 w3-margin-bottom">
+                        <div class="c-card w3-white w3-card-4" style="padding: 30px; border-radius: 8px; min-height: 350px;">
+                            <i class="fa fa-[ICON_3] w3-text-metro-light-blue" style="font-size: 48px;"></i>
+                            <h3>[SERVICE_3_TITLE]</h3>
+                            <p>[SERVICE_3_DESCRIPTION]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Features Section -->
+        <section id="portfolio" class="w3-container container" style="padding: 80px 16px;">
+            <h2 class="w3-center"><span class="title-span">Our Work</span></h2>
+            
+            <!-- Feature 1 - Image Left -->
+            <div class="c-card reveal" style="margin: 60px 0;">
+                <div class="w3-row-padding">
+                    <div class="w3-col l6 m12">
+                        <img src="content/placeholder-feature-1.jpg" alt="[FEATURE_1_TITLE]" style="width:100%; border-radius: 8px;" class="w3-card-4">
+                    </div>
+                    <div class="w3-col l6 m12" style="padding: 40px 20px;">
+                        <h3>[FEATURE_1_TITLE]</h3>
+                        <p>[FEATURE_1_DESCRIPTION]</p>
+                        <ul>
+                            <li>[FEATURE_1_POINT_1]</li>
+                            <li>[FEATURE_1_POINT_2]</li>
+                            <li>[FEATURE_1_POINT_3]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 - Image Right -->
+            <div class="c-card-right reveal" style="margin: 60px 0;">
+                <div class="w3-row-padding">
+                    <div class="w3-col l6 m12" style="padding: 40px 20px;">
+                        <h3>[FEATURE_2_TITLE]</h3>
+                        <p>[FEATURE_2_DESCRIPTION]</p>
+                        <ul>
+                            <li>[FEATURE_2_POINT_1]</li>
+                            <li>[FEATURE_2_POINT_2]</li>
+                            <li>[FEATURE_2_POINT_3]</li>
+                        </ul>
+                    </div>
+                    <div class="w3-col l6 m12">
+                        <img src="content/placeholder-feature-2.jpg" alt="[FEATURE_2_TITLE]" style="width:100%; border-radius: 8px;" class="w3-card-4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="w3-container w3-light-grey" style="padding: 80px 16px;">
+            <div class="container">
+                <h2 class="w3-center"><span class="title-span">Contact Us</span></h2>
+                <p class="w3-center w3-large">[CONTACT_DESCRIPTION]</p>
+                
+                <form action="https://formsubmit.co/[YOUR_EMAIL]" method="POST" class="w3-margin-top">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_next" value="[YOUR_WEBSITE_URL]">
+                    
+                    <div class="w3-row-padding">
+                        <div class="w3-col l6 m12">
+                            <label>Name</label>
+                            <input class="w3-input w3-border w3-round" type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="w3-col l6 m12">
+                            <label>Email</label>
+                            <input class="w3-input w3-border w3-round" type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="w3-margin-top">
+                        <label>Subject</label>
+                        <input class="w3-input w3-border w3-round" type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    
+                    <div class="w3-margin-top">
+                        <label>Message</label>
+                        <textarea class="w3-input w3-border w3-round" name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w3-button w3-metro-light-blue w3-padding-large w3-large w3-margin-top">
+                        <i class="fa fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="w3-container w3-metro-dark-blue w3-center w3-text-white" style="padding: 60px 16px;">
+        <div class="w3-xlarge w3-padding-16">
+            <a href="[SOCIAL_FACEBOOK]" class="w3-hover-opacity" target="_blank"><i class="fa fa-facebook-official"></i></a>
+            <a href="[SOCIAL_INSTAGRAM]" class="w3-hover-opacity" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="[SOCIAL_TWITTER]" class="w3-hover-opacity" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="[SOCIAL_LINKEDIN]" class="w3-hover-opacity" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p>[FOOTER_TEXT]</p>
+        <p class="w3-small">© [YEAR] [COMPANY_NAME]. All rights reserved.</p>
+        <a href="privacy.html" class="w3-hover-opacity">Privacy Policy</a>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="goToTop()" id="backToTop" class="w3-button w3-metro-light-blue" style="display:none; position:fixed; bottom:20px; right:20px; z-index:999; border-radius:50%; width:50px; height:50px;">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script async>
+        // Mobile Navigation Toggle
+        function toggleMobileNavigation() {
+            var x = document.getElementById("mobile-sidenav");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        // Scroll to Top
+        function goToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Show/Hide Back to Top Button
+        window.onscroll = function() {
+            scroll();
+            reveal();
+        };
+
+        function scroll() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        }
+
+        // Reveal Animation on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
